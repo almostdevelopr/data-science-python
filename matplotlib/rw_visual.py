@@ -1,6 +1,5 @@
-import matplotlib.pyplot as plt
-
 from random_walk import RandomWalk
+import matplotlib.pyplot as plt
 
 # Keep making new walks,as long as the program is active.
 while True:
@@ -13,7 +12,7 @@ while True:
     fig, ax = plt.subplots()
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values,
-               c=point_numbers, cmap=plt.cm.Blues, s=15)
+               c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
     plt.show()
 
     keep_running = input("Make another walk? (y/n)")
